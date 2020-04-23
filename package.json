@@ -1,0 +1,28 @@
+{
+  "name": "sy-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=devlopment nodemon ./src/app.js"
+  },
+  "author": "Tareef Mando",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@hapi/joi": "^17.1.0",
+    "@koa/cors": "^3.0.0",
+    "date-fns": "^2.9.0",
+    "flexsearch": "^0.6.32",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^8.0.6",
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  }
+}
