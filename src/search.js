@@ -52,9 +52,15 @@ const enIndex = new FlexSearch({
 
 enIndex.add(units);
 
+const isQueryEmpty = query => R.all(R.isEmpty)(query.map(obj => obj.query));
+
 function localizeSearch(searchQuery, lang) {
   const isEn = lang === "en";
-  return isEn ? enIndex.search(searchQuery) : arIndex.search(searchQuery);
+  return isQueryEmpty(searchQuery)
+    ? units
+    : isEn
+    ? enIndex.search(searchQuery)
+    : arIndex.search(searchQuery);
 }
 
 function filterbyDates(result, dateBefore, dateAfter) {
