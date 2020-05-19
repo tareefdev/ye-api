@@ -12,7 +12,6 @@ const getCollection = collections.get;
 const getCh = collections.getCh;
 const splitData = helper.splitData;
 const getIncident = incidents.get;
-console.log("hi", incidents);
 
 // Schemas to validate query parameters
 const searchSchema = Joi.object({
